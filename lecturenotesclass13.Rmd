@@ -106,6 +106,8 @@ as the "best guess", or estimate, for the population parameter.
 Suppose we were interested in the population mean. What would be natural
 point estimate to use?
 
+The mean of the sample
+
 
 | Quantity           | Parameter  | Statistic   |
 |--------------------|------------|-------------|
@@ -117,6 +119,8 @@ point estimate to use?
 
 
 What is the downside to using point estimates?
+
+They typically won't represent the actual mean.
 
 ## Confidence intervals
 
@@ -189,7 +193,7 @@ Consider 20 1-bedroom apartments that were randomly selected on
 Craigslist Manhattan from apartments listed as "by owner".
 
 ```{r data_manhattan}
-manhattan <- read_csv("~/manhattan.csv")
+manhattan <- read_csv("~/R/Lecture Notes 13/manhattan.csv")
 ```
 
 Consider 3-10 day survival of mice randomized to various
@@ -250,10 +254,10 @@ Create a 95% bootstrap confidence interval for the population *mean* price of
 
 First, identify the following:
 
-- Population: 
-- Parameter of interest:
-- Sample:
-- Sample size:
+- Population: 1 bedroom apartments in Manhattan 
+- Parameter of interest: Mean price
+- Sample: 1 bedroom apartments in Manhattan
+- Sample size: 20
 
 To create our confidence interval, we'll follow the four-step bootstrap
 scheme outlined in the slides using functions from `infer`.
